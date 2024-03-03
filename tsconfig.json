@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "target": "ES6",
+        "module": "Node16",
+
+        "noImplicitReturns": true,
+        "noUnusedParameters": true,
+    }
+}
