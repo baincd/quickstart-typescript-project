@@ -11,6 +11,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baincd/quickstart-typescript-project.git"
+  },
   "devDependencies": {
     "tsc-watch": "^6.0.4",
     "typescript": "^5.3.3"
