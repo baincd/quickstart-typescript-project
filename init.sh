@@ -28,6 +28,18 @@ npm pkg delete repository
 npm i --package-lock-only --audit=false
 git commit -a -m "Delete quickstart-typescript-project specific files and settings"
 
+# Update .gitignore
+if curl -L https://www.toptal.com/developers/gitignore/api/node,visualstudiocode > .gitignore.download; then
+    mv .gitignore.download .gitignore
+else
+    rm .gitignore.download
+fi
+if [[ -n "$(git status --porcelain)" ]]; then
+    git commit -a -m "Update .gitignore";
+else
+    echo ".gitignore is unchanged";
+fi
+
 # Update TypeScript and tsc-watch to latest version
 npm i --save-dev typescript@latest tsc-watch@latest
 npm audit fix
